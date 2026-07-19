@@ -12,3 +12,7 @@ const routerperson=require('./router/routerperson.js');
 app.use('/',routerperson);
 const routermenu=require('./router/menurouter.js');
 app.use('/',routermenu);
+app.get("/check",(req,res)=>{
+  console.log("everthing is fine");
+  res.status(200).json({message:"everything is okay"});
+})
